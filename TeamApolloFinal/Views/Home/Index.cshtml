@@ -3,20 +3,26 @@
     ViewBag.Title = "Home Page";
 }
 
+@*<head>
+    <script>
+        
+    </script>
+</head>*@
 
-   
+<body> 
 <h2>HomePage</h2>
 
-<table>
-    @foreach (var quotes in Model)
-    {
-        <tr>
+@foreach (var quotes in Model)
+{
+    <div>
+        @Html.DisplayFor(modelItem => quotes.Motivation)
+    </div>
+}
 
-            <td>
-                @Html.DisplayFor(modelItem => quotes.Motivation)
-            </td>
-        </tr>
+    <a class="twitter-timeline" href="https://twitter.com/ASG_Launchpad">Tweets by ASG_Launchpad</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
 
-    }
-</table>
+
+
 
