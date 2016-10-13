@@ -236,6 +236,7 @@
       <DependentUpon>Quotes.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\RandomNumberGenerator.cs" />
+    <Compile Include="Models\Tweets.cs" />
     <Compile Include="Models\TwitterGetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -261,9 +262,6 @@
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <EntityDeploy Include="Models\Quotes.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Quotes.Designer.cs</LastGenOutput>

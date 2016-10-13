@@ -22,9 +22,9 @@ namespace TeamApolloFinal.Controllers
             RandomNumberGenerator randNum = new RandomNumberGenerator();
             int randQuoteID = randNum.NumberBetween(1, dbQuotes.Count());
 
-            foreach(Apollo quote in dbQuotes)
+            foreach (Apollo quote in dbQuotes)
             {
-                if(quote.QuoteID == randQuoteID)
+                if (quote.QuoteID == randQuoteID)
                 {
                     quoteDisplayed.Add(quote);
 
