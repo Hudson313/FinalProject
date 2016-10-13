@@ -244,12 +244,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\02950_dreambig_1366x768.jpg" />
-    <Content Include="Content\Images\03196_carinanebula_1366x768.jpg" />
-    <Content Include="Content\Images\03397_rockefellercallsitaday_1366x768.jpg" />
-    <Content Include="Content\Images\03403_stellarnightovermanhattan_1366x768 %281%29.jpg" />
-    <Content Include="Content\Images\03403_stellarnightovermanhattan_1366x768.jpg" />
-    <Content Include="Content\Images\1oFmnFg.jpg" />
+    <Content Include="Content\Images\codingame_480.jpg" />
+    <Content Include="Content\Images\github_480.jpg" />
+    <Content Include="Content\Images\mdsn_480.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
