@@ -244,9 +244,23 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\codingame_480.jpg" />
-    <Content Include="Content\Images\github_480.jpg" />
-    <Content Include="Content\Images\mdsn_480.jpg" />
+    <Content Include="Content\Images\Codeacademy.jpg" />
+    <Content Include="Content\Images\CodinGame.jpg" />
+    <Content Include="Content\Images\EdX.jpg" />
+    <Content Include="Content\Images\github.jpg" />
+    <Content Include="Content\Images\KhanAcademy.jpg" />
+    <Content Include="Content\Images\LifeHacker.jpg" />
+    <Content Include="Content\Images\MDSN.jpg" />
+    <Content Include="Content\Images\Reddit.jpg" />
+    <Content Include="Content\Images\StackOverflow.jpg" />
+    <Content Include="Content\Images\W3Schools.jpg" />
+    <Content Include="Content\OwlCarousel\AjaxLoader.gif" />
+    <Content Include="Content\OwlCarousel\grabbing.png" />
+    <Content Include="Content\OwlCarousel\owl.carousel.css" />
+    <Content Include="Content\OwlCarousel\owl.carousel.js" />
+    <Content Include="Content\OwlCarousel\owl.carousel.min.js" />
+    <Content Include="Content\OwlCarousel\owl.theme.css" />
+    <Content Include="Content\OwlCarousel\owl.transitions.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -272,6 +286,7 @@
     <Content Include="Models\Quotes.edmx.diagram">
       <DependentUpon>Quotes.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\TeamApollo-AllSystemsGo.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
