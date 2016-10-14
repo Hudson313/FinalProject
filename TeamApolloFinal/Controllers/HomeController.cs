@@ -17,20 +17,20 @@ namespace TeamApolloFinal.Controllers
         public ActionResult Index()
         {
             List<Apollo> dbQuotes = dbContext.Apolloes.ToList();
-            List<Apollo> quoteDisplayed = new List<Apollo>();
+            //List<Apollo> quoteDisplayed = new List<Apollo>();
 
-            RandomNumberGenerator randNum = new RandomNumberGenerator();
-            int randQuoteID = randNum.NumberBetween(1, dbQuotes.Count());
+            //RandomNumberGenerator randNum = new RandomNumberGenerator();
+            //int randQuoteID = randNum.NumberBetween(1, dbQuotes.Count());
 
-            foreach (Apollo quote in dbQuotes)
-            {
-                if (quote.QuoteID == randQuoteID)
-                {
-                    quoteDisplayed.Add(quote);
+            //foreach (Apollo quote in dbQuotes)
+            //{
+            //    if (quote.QuoteID == randQuoteID)
+            //    {
+            //        quoteDisplayed.Add(quote);
 
-                    return View(quoteDisplayed);
-                }
-            }
+            //        return View(quoteDisplayed);
+            //    }
+            //}
 
             return View(dbQuotes);
         }

@@ -35,18 +35,42 @@
     <!-- Include js plugin -->
 
     <script src="~/Scripts/owl.carousel.min.js"></script>
+
+    <script>
+        var quotes = [];
+
+        @foreach(var quote in Model) {
+            <text>
+                quotes.push(`@quote.Motivation`);
+            </text>
+        }
+
+        
+        //Loop for random quote
+        function display() {
+            document.getElementById("quoteDiv").innerHTML = quotes[0];
+        }
+    </script>
 </head>
+
 <body>
     @*@*Quotes*@
-    @foreach (var quotes in Model)
+
+    <button onclick="display()">Click Me</button>
+    <div id="quoteDiv">Some text</div>
+
+
+
+    @*@foreach (var quotes in Model)
     {
         <div>
             @Html.DisplayFor(modelItem => quotes.Motivation)
         </div>
-    }
+    }*@
+
     <div id="owl-demo">
 
-        <div class="item"><img src="~/Content/Images/github.jpg" alt="Owl Image"></div>
+        <div class="item"><a href="https://www.github.com" target="_blank"><img src="~/Content/Images/github.jpg" alt="Owl Image"></a></div>
         <div class="item"><img src="~/Content/Images/MDSN.jpg" alt="Owl Image"></div>
         <div class="item"><img src="~/Content/Images/W3Schools.jpg" alt="Owl Image"></div>
         <div class="item"><img src="~/Content/Images/Codeacademy.jpg" alt="Owl Image"></div>
