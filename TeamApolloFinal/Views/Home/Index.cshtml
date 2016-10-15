@@ -37,18 +37,19 @@
     <script src="~/Scripts/owl.carousel.min.js"></script>
 
     <script>
-        var quotes = [];
+        var quotesArry = [];
 
         @foreach(var quote in Model) {
             <text>
-                quotes.push(`@quote.Motivation`);
+                quotesArry.push(`@quote.Motivation`);
             </text>
         }
 
         
         //Loop for random quote
         function display() {
-            document.getElementById("quoteDiv").innerHTML = quotes[0];
+            //document.getElementById("quoteDiv").innerHTML = quotes[0];
+            document.getElementById("quoteDiv").innerHTML = quotesArry[Math.floor((Math.random() * (quotesArry.length + 2)))];
         }
     </script>
 </head>
@@ -56,8 +57,8 @@
 <body>
     @*@*Quotes*@
 
-    <button onclick="display()">Click Me</button>
-    <div id="quoteDiv">Some text</div>
+    <button onclick="display()">Fuel Up</button>
+    <div id="quoteDiv">@ViewBag.Quote</div>
 
 
 
@@ -72,14 +73,14 @@
 
         <div class="item"><a href="https://www.github.com" target="_blank"><img src="~/Content/Images/github.jpg" alt="Owl Image"></a></div>
         <div class="item"><img src="~/Content/Images/EdX.jpg" alt="Owl Image"></div>
-        <div class="item"><a href="https://social.msdn.microsoft.com/search/en-US" target="_blank"><img src="~/Content/Images/MDSN.jpg" alt="Owl Image"></div>
-        <div class="item"><a href="http://www.w3schools.com/" target="_blank"><img src="~/Content/Images/W3Schools.jpg" alt="Owl Image"></div>
-        <div class="item"><a href="https://www.codecademy.com/" target="_blank"><img src="~/Content/Images/Codeacademy.jpg" alt="Owl Image"></div>
-        <div class="item"><a href="https://www.reddit.com/r/learnprogramming/" target="_blank"><img src="~/Content/Images/Reddit.jpg" alt="Owl Image"></div>
-        <div class="item"><a href="http://stackoverflow.com/" target="_blank"><img src="~/Content/Images/StackOverflow.jpg" alt="Owl Image"></div>
-        <div class="item"><a href="https://www.edx.org/course/subject/computer-science" target="_blank"><img src="~/Content/Images/EdX.jpg" alt="Owl Image"></div>
-        <div class="item"><a href="https://www.khanacademy.org/computing/computer-programming" target="_blank"><img src="~/Content/Images/KhanAcademy.jpg" alt="Owl Image"></div>
-        <div class="item"><a href="http://lifehacker.com/" target="_blank"><img src="~/Content/Images/LifeHacker.jpg" alt="Owl Image"></div>
+        <div class="item"><a href="https://social.msdn.microsoft.com/search/en-US" target="_blank"><img src="~/Content/Images/MDSN.jpg" alt="Owl Image"></a></div>
+        <div class="item"><a href="http://www.w3schools.com/" target="_blank"><img src="~/Content/Images/W3Schools.jpg" alt="Owl Image"></a></div>
+        <div class="item"><a href="https://www.codecademy.com/" target="_blank"><img src="~/Content/Images/Codeacademy.jpg" alt="Owl Image"></a></div>
+        <div class="item"><a href="https://www.reddit.com/r/learnprogramming/" target="_blank"><img src="~/Content/Images/Reddit.jpg" alt="Owl Image"></a></div>
+        <div class="item"><a href="http://stackoverflow.com/" target="_blank"><img src="~/Content/Images/StackOverflow.jpg" alt="Owl Image"></a></div>
+        <div class="item"><a href="https://www.edx.org/course/subject/computer-science" target="_blank"><img src="~/Content/Images/EdX.jpg" alt="Owl Image"></a></div>
+        <div class="item"><a href="https://www.khanacademy.org/computing/computer-programming" target="_blank"><img src="~/Content/Images/KhanAcademy.jpg" alt="Owl Image"></a></div>
+        <div class="item"><a href="http://lifehacker.com/" target="_blank"><img src="~/Content/Images/LifeHacker.jpg" alt="Owl Image"></a></div>
 
 
 
