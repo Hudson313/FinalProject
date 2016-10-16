@@ -26,5 +26,6 @@ namespace TeamApolloFinal.Models
         }
     
         public virtual DbSet<Apollo> Apolloes { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

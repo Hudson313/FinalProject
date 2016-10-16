@@ -1,0 +1,18 @@
+﻿@model TeamApolloFinal.Models.User
+
+@{
+    ViewBag.Title = "LogIn";
+}
+
+<h2>LogIn</h2>
+
+@ViewBag.InvalidLogIn
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <p>Username: @Html.TextBoxFor(x => x.UserName)</p>
+    <p>Password: @Html.PasswordFor(x =>x.Password)</p>
+
+    <input type="submit" value="Submin Info." />
+}

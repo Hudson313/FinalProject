@@ -49,5 +49,60 @@ namespace TeamApolloFinal.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult LogIn()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult Login(User admin)
+        {
+            foreach(User name in dbContext.Users.ToList())
+            {
+                if((name.UserName == admin.UserName) && (name.Password == admin.Password))
+                {
+                    return View("AddQuote");
+                }
+                else
+                {
+                    ViewBag.InvalidLogIn = "Your username/password is incorrect";
+                    return View();
+                }
+            }
+
+            return View();
+        }
+
+        //[HttpGet]
+        //public ActionResult AddQuote()
+        //{
+        //    return View();
+        //}
+
+        [HttpPost]
+        public ActionResult AddQuote(FormCollection collection)
+        {
+            try
+            {
+                Apollo newQuote = new Apollo();
+
+                newQuote.Motivation = Request.Form["Motivation"];
+
+                dbContext.Apolloes.Add(newQuote);
+                dbContext.SaveChanges();
+
+                ViewBag.AddQuoteStatus = "You have added a new quote";
+
+                return View("AddQuote");
+            }
+            catch
+            {
+                ViewBag.AddQuoteStatus = "The quote was not added";
+
+                return View("AddQuote");
+            }
+        }
     }
 }

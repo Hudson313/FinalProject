@@ -60,14 +60,7 @@
     <button onclick="display()">Fuel Up</button>
     <div id="quoteDiv">@ViewBag.Quote</div>
 
-
-
-    @*@foreach (var quotes in Model)
-    {
-        <div>
-            @Html.DisplayFor(modelItem => quotes.Motivation)
-        </div>
-    }*@
+    @Html.ActionLink("Login", "LogIn")
 
     <div id="owl-demo">
 
