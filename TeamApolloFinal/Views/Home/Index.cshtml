@@ -10,6 +10,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    @Styles.Render("~/Content/css")
     <style>
         #owl-demo .item {
             margin: 3px;
@@ -56,15 +57,35 @@
 </head>
 
 <body style="background-image: url('../../Content/Images/Space.jpg'); height: 100%; width: auto;">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("AllSystemsGo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("AdminLogin", "LogIn")</li>
+                    <li>@Html.ActionLink("Register", "Register")</li>
+                </ul>
+                @*@Html.Partial("_LoginPartial")*@
+            </div>
+        </div>
+    </div>
     @*@*Quotes*@
-
-    <button onclick="display()">Fuel Up</button>
+    
+    <button onclick="display()">Fuel Up! Click Here For Another Quote</button>
     <div id="quoteDiv" style="font-family:'Gentium Book Basic'; font-weight:bold; font-size:20px; color:white; ">@ViewBag.Quote</div>
 
 
 
-    @Html.ActionLink("Login", "LogIn")
-    @Html.ActionLink("Register", "Register")
+    
+
 
     @using (Html.BeginForm())
     {
@@ -112,11 +133,13 @@
         });
     </script>
     @*Twitter widget*@
+    <h2 style="color:white;">Tweet us your programming questions at asg_launchpad</h2>
     <a class="twitter-timeline" href="https://twitter.com/ASG_Launchpad">Tweets by ASG_Launchpad</a>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     @*Youtube API*@
     @*1. The <iframe> (and video player) will replace this <div> tag.*@
+    <h2 style="color:white;">Feed your mind and body with these helpful videos</h2>
     <div id="player"></div>
     <script>
         // 2. This code loads the IFrame Player API code asynchronously.
