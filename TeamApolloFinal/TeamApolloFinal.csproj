@@ -255,6 +255,7 @@
     <Content Include="Content\Images\LifeHacker.jpg" />
     <Content Include="Content\Images\MDSN.jpg" />
     <Content Include="Content\Images\Reddit.jpg" />
+    <Content Include="Content\Images\Space.jpg" />
     <Content Include="Content\Images\StackOverflow.jpg" />
     <Content Include="Content\Images\W3Schools.jpg" />
     <Content Include="Content\OwlCarousel\AjaxLoader.gif" />
@@ -289,6 +290,7 @@
     <Content Include="Models\Quotes.edmx.diagram">
       <DependentUpon>Quotes.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\NEON LIGHTS.ttf" />
     <None Include="Properties\PublishProfiles\TeamApollo-AllSystemsGo.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
