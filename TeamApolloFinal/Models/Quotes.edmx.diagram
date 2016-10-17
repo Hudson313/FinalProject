@@ -7,6 +7,7 @@
       <Diagram DiagramId="40a3eceee5c84570a309f7f358ccad6b" Name="Diagram1">
         <EntityTypeShape EntityType="MotivationaldbModel.Apollo" Width="6.375" PointX="0.625" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MotivationaldbModel.User" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="MotivationaldbModel.Student" Width="1.5" PointX="3.375" PointY="2.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -236,6 +236,9 @@
       <DependentUpon>Quotes.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\RandomNumberGenerator.cs" />
+    <Compile Include="Models\Student.cs">
+      <DependentUpon>Quotes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Tweets.cs" />
     <Compile Include="Models\TwitterGetter.cs" />
     <Compile Include="Models\User.cs">
@@ -343,6 +346,7 @@
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\Home\LogIn.cshtml" />
     <Content Include="Views\Home\AddQuote.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

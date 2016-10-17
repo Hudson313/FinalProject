@@ -57,13 +57,13 @@ namespace TeamApolloFinal.Controllers
         }
 
         [HttpPost]
-        public ViewResult Login(User admin)
+        public ActionResult Login(User admin)
         {
             foreach(User name in dbContext.Users.ToList())
             {
                 if((name.UserName == admin.UserName) && (name.Password == admin.Password))
                 {
-                    return View("AddQuote");
+                    return RedirectToAction("AddQuote");
                 }
                 else
                 {
@@ -75,11 +75,11 @@ namespace TeamApolloFinal.Controllers
             return View();
         }
 
-        //[HttpGet]
-        //public ActionResult AddQuote()
-        //{
-        //    return View();
-        //}
+        [HttpGet]
+        public ActionResult AddQuote()
+        {
+            return View();
+        }
 
         [HttpPost]
         public ActionResult AddQuote(FormCollection collection)
@@ -103,6 +103,12 @@ namespace TeamApolloFinal.Controllers
 
                 return View("AddQuote");
             }
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+
         }
     }
 }
