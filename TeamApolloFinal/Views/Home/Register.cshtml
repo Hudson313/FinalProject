@@ -44,12 +44,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Track, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                What track are you enrolled in?
-                @Html.DropDownListFor(x => x.Track, new[] { new SelectListItem() { Text = "Java", Value = bool.TrueString},
-                 new SelectListItem() {Text = ".Net", Value = bool.FalseString} }, "Choose an option", new { @class = "form-control" })
-
-                @*@Html.EditorFor(model => model.Track, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Track, "", new { @class = "text-danger" })*@
+                @Html.EditorFor(model => model.Track, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Track, "", new { @class = "text-danger" })
             </div>
         </div>
 

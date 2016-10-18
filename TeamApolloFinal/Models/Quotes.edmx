@@ -20,7 +20,6 @@
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Birthday" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Track" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
@@ -68,7 +67,6 @@
           <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Birthday" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Track" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
       </Schema>
@@ -98,7 +96,6 @@
             <EntityTypeMapping TypeName="MotivationaldbModel.Student">
               <MappingFragment StoreEntitySet="Student">
                 <ScalarProperty Name="Track" ColumnName="Track" />
-                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />

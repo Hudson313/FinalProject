@@ -1,0 +1,12 @@
+﻿@model IEnumerable<TeamApolloFinal.Models.Student>
+@{
+    ViewBag.Title = "DisplayStudents";
+}
+
+<h2>DisplayStudents</h2>
+@foreach (var Student in Model)
+{
+    <p>
+         @Student.FirstName,@Student.LastName,@Student.Email,@Student.Track
+    </p>
+}

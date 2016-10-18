@@ -244,11 +244,53 @@ namespace TeamApolloFinal.Controllers
                 return View("AddQuote");
             }
         }
-
+          [HttpGet]
         public ActionResult Register()
         {
             return View();
 
         }
+        [HttpPost]
+        public ActionResult Register(FormCollection Collection)
+        {
+            try
+            {
+                Student addStudent = new Student();
+                addStudent.FirstName = Request.Form["FirstName"];
+                addStudent.LastName = Request.Form["LastName"];
+                addStudent.Email = Request.Form["Email"];
+                //addStudent.Track = Request.Form["Track"];
+
+                //if ((addStudent.Track.ToLower() == ".net") || (addStudent.Track.ToLower()== "java"))
+                if ((Request.Form["Track"].ToLower() == ".net") || (Request.Form["Track"].ToLower() == "java"))
+                {
+                    addStudent.Track = Request.Form["Track"];
+
+
+                }
+                else
+                {
+                    ViewBag.StudentStatus = "Please enter .net or java";
+                    return View("Register");
+                }
+                dbContext.Students.Add(addStudent);
+                dbContext.SaveChanges();
+                return View("ConfirmRegister", addStudent);
+
+            }
+            catch
+            {
+                ViewBag.StudentStatus = "You were not added please try again.";
+                return View("Register");
+            }
+        }
+        public ActionResult DisplayStudents()
+        {
+            List<Student> dbStudents = dbContext.Students.ToList();
+
+            return View(dbStudents);
+        }
+
+
     }
 }

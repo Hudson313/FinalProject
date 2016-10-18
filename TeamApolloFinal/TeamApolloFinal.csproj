@@ -350,6 +350,8 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\DisplayQuotes.cshtml" />
     <Content Include="Views\Home\DeleteQuote.cshtml" />
+    <Content Include="Views\Home\DisplayStudents.cshtml" />
+    <Content Include="Views\Home\ConfirmRegister.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
