@@ -11,7 +11,55 @@ namespace TeamApolloFinal.Controllers
 {
     public class HomeController : Controller
     {
-        private MotivationaldbEntities dbContext = new MotivationaldbEntities();
+        public MotivationaldbEntities dbContext = new MotivationaldbEntities();
+
+        public List<CarouselData> dotnet = new List<CarouselData>()
+          { new CarouselData(){linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"/Content/Images/MSDN.jpg", alt="Owl Image"} ,
+            new CarouselData() {  linkUrl= "https://dotnetcademy.net/", src=@"Content\Images\Dotnetcademy.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://www.reddit.com/r/dot_NET_Development/", src=@"Content\Images\RedditNet.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://trello.com", src=@"Content\Images\Trello.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.onlineprogrammingbooks.com/visualbasic-net/", src=@"Content\Images\.NetEbook.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://devproconnections.com/windows-development/learn-net-framework-c-no-prior-coding-experience", src=@"Content\Images\Devproconnect.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://blog.rackspace.com/how-i-learned-microsoft-net", src=@"Content\Images\.Net+Blog.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.memrise.com/course/700708/learn-net-framework/", src=@"Content\Images\Memrise.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.teachertube.com/video/best-way-to-learn-net-framework-423724?utm_source=video-google&utm_medium=video-view&utm_term=video&utm_content=video-page&utm_campaign=video-view-page", src=@"Content\Images\TeacherTube.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://www.pluralsight.com/blog/software-development/learning-path-understanding-net-framework", src=@"Content\Images\.Net+Blog.jpg", alt="Owl Image"}
+            };
+        public List<CarouselData> java = new List<CarouselData>()
+            {new CarouselData() { linkUrl= "https://www.reddit.com/r/java", src=@"/Content/Images/MDSN.jpg", alt="Owl Image"} ,
+            new CarouselData() {  linkUrl= "https://go.java/index.html", src=@"/Content/Images/Go.Java.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.learnjavaonline.org/", src=@"/Content/Images/W3Schools.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.oracle.com/technetwork/java/index-jsp-135888.html", src=@"/Content/Images/Oracle.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://trello.com/", src=@"/Content/Images/Trello.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://www.sololearn.com/Course/Java/", src=@"/Content/Images/SoloLearn.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "http://www.javaworld.com/article/2076075/learn-java/core-java-learn-java-from-the-ground-up.html", src=@"/Content/Images/JavaWorld.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://www.codementor.io/learn-java", src=@"/Content/Images/Codementor.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://www.simplilearn.com/resources-to-learn-java-programming-article", src=@"/Content/Images/Simplilearn.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://www.learneroo.com/modules/11", src=@"/Content/Images/Learneroo.jpg", alt="Owl Image"}
+            };
+
+        public List<CarouselData> all = new List<CarouselData>()
+            { new CarouselData() {linkUrl = "https://slack.com/", src =@"/Content/Images/Slack.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://github.com", src =@"/Content/Images/github.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.reddit.com/r/learnprogramming/", src =@"/Content/Images/Reddit.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://www.w3schools.com/", src =@"/Content/Images/W3Schools.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.khanacademy.org/computing/computer-programming", src =@"/Content/Images/KhanAcademy.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://stackoverflow.com/", src =@"/Content/Images/StackOverflow.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.codecademy.com/", src =@"/Content/Images/Codeacademy.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.edx.org/course/subject/computer-science", src =@"/Content/Images/EdX.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://techcrunch.com/", src =@"/Content/Images/TechCrunch.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://codefights.com/", src =@"/Content/Images/Codefights.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.freecodecamp.com/", src =@"/Content/Images/Freecodecamp.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.udacity.com/nanodegree", src =@"/Content/Images/Udacity.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://startbootstrap.com/", src =@"/Content/Images/Bootstrap.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://interfacelift.com/", src =@"/Content/Images/Interfacelift.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://cordova.apache.org/", src =@"/Content/Images/Cordova.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://www.codewars.com/", src =@"/Content/Images/Codewars.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.codingame.com/start", src =@"/Content/Images/CodinGame.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://gizmodo.com/", src =@"/Content/Images/Gizmodo.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://stackoverflow.com/users/story/join", src =@"/Content/Images/Developer+Story.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://lifehacker.com/", src =@"/Content/Images/LifeHacker.jpg", alt="Owl Image" },
+            };
 
 
         public ActionResult Index()
@@ -32,37 +80,60 @@ namespace TeamApolloFinal.Controllers
                     ViewBag.Quote = quote.Motivation.ToString();
                 }
             }
-            List<CarouselData> dotnet = new List<CarouselData>()
-            { new CarouselData() {  linkUrl= "https://www.github.com", src=@"/Content/Images/github.jpg", alt="Owl Image"} ,
-            new CarouselData() {  linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"/Content/Images/MDSN.jpg", alt="MSDN"},
-            new CarouselData() { linkUrl= "http://www.w3schools.com/", src=@"/Content/Images/W3Schools.jpg", alt="Owl Image"},
-            new CarouselData() { linkUrl= "https://www.reddit.com/r/learnprogramming/", src=@"/Content/Images/Reddit.jpg", alt="Owl Image"}};
+
+             List<CarouselData> dotnet = new List<CarouselData>()
+          { new CarouselData(){linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"/Content/Images/MSDN.jpg", alt="Owl Image"} ,
+            new CarouselData() {  linkUrl= "https://dotnetcademy.net/", src=@"/Content/Images/Dotnetcademy.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://www.reddit.com/r/dot_NET_Development/", src=@"/Content/Images/RedditNet.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://trello.com", src=@"/Content/Images/Trello.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.onlineprogrammingbooks.com/visualbasic-net/", src=@"/Content/Images/.NetEbook.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://devproconnections.com/windows-development/learn-net-framework-c-no-prior-coding-experience", src=@"/Content/Images/Devproconnect.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://blog.rackspace.com/how-i-learned-microsoft-net", src=@"/Content/Images/.Net+Blog.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.memrise.com/course/700708/learn-net-framework/", src=@"/Content/Images/Memrise.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.teachertube.com/video/best-way-to-learn-net-framework-423724?utm_source=video-google&utm_medium=video-view&utm_term=video&utm_content=video-page&utm_campaign=video-view-page", src=@"/Content/Images/TeacherTube.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://www.pluralsight.com/blog/software-development/learning-path-understanding-net-framework", src=@"/Content/Images/.Net+Blog.jpg", alt="Owl Image"}
+            };
 
 
+
+            
             List<CarouselData> java = new List<CarouselData>()
-            { new CarouselData() { linkUrl= "https://www.reddit.com/r/learnprogramming/", src=@"/Content/Images/MDSN.jpg", alt="Owl Image"} ,
-            new CarouselData() {  linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"/Content/Images/MDSN.jpg", alt="MSDN"},
-            new CarouselData() { linkUrl= "http://www.w3schools.com/", src=@"/Content/Images/W3Schools.jpg", alt="Owl Image"},
-            new CarouselData() { linkUrl= "https://www.reddit.com/r/learnprogramming/", src=@"/Content/Images/Reddit.jpg", alt="Owl Image"}};
+            {new CarouselData() { linkUrl= "https://www.reddit.com/r/java", src=@"/Content/Images/MDSN.jpg", alt="Owl Image"} ,
+            new CarouselData() {  linkUrl= "https://go.java/index.html", src=@"/Content/Images/Go.Java.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.learnjavaonline.org/", src=@"/Content/Images/W3Schools.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "http://www.oracle.com/technetwork/java/index-jsp-135888.html", src=@"/Content/Images/Oracle.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://trello.com/", src=@"/Content/Images/Trello.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://www.sololearn.com/Course/Java/", src=@"/Content/Images/SoloLearn.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "http://www.javaworld.com/article/2076075/learn-java/core-java-learn-java-from-the-ground-up.html", src=@"/Content/Images/JavaWorld.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://www.codementor.io/learn-java", src=@"/Content/Images/Codementor.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://www.simplilearn.com/resources-to-learn-java-programming-article", src=@"/Content/Images/Simplilearn.jpg", alt="Owl Image"},
+            new CarouselData() {  linkUrl= "https://www.learneroo.com/modules/11", src=@"/Content/Images/Learneroo.jpg", alt="Owl Image"}
+            };
 
+         List<CarouselData> all = new List<CarouselData>()
+            { new CarouselData() {linkUrl = "https://slack.com/", src =@"/Content/Images/Slack.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://github.com", src =@"/Content/Images/github.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.reddit.com/r/learnprogramming/", src =@"/Content/Images/Reddit.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://www.w3schools.com/", src =@"/Content/Images/W3Schools.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.khanacademy.org/computing/computer-programming", src =@"/Content/Images/KhanAcademy.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://stackoverflow.com/", src =@"/Content/Images/StackOverflow.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.codecademy.com/", src =@"/Content/Images/Codeacademy.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.edx.org/course/subject/computer-science", src =@"/Content/Images/EdX.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://techcrunch.com/", src =@"/Content/Images/TechCrunch.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://codefights.com/", src =@"/Content/Images/Codefights.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.freecodecamp.com/", src =@"/Content/Images/Freecodecamp.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.udacity.com/nanodegree", src =@"/Content/Images/Udacity.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://startbootstrap.com/", src =@"/Content/Images/Bootstrap.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://interfacelift.com/", src =@"/Content/Images/Interfacelift.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://cordova.apache.org/", src =@"/Content/Images/Cordova.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://www.codewars.com/", src =@"/Content/Images/Codewars.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "https://www.codingame.com/start", src =@"/Content/Images/CodinGame.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://gizmodo.com/", src =@"/Content/Images/Gizmodo.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://stackoverflow.com/users/story/join", src =@"/Content/Images/Developer+Story.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://lifehacker.com/", src =@"/Content/Images/LifeHacker.jpg", alt="Owl Image" },
+            };
 
-            List<CarouselData> everything = java;
-            /*
-             *   <div class="item"><a href="https://www.github.com" target="_blank"><img src="~/Content/Images/github.jpg" alt="Owl Image"></a></div>
-        
-        <div class="item"><a href="https://social.msdn.microsoft.com/search/en-US" target="_blank"><img src="~/Content/Images/MDSN.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="http://www.w3schools.com/" target="_blank"><img src="~/Content/Images/W3Schools.jpg" alt="Owl Image"></a></div>
-     
-       
-        <div class="item"><a href="https://www.reddit.com/r/learnprogramming/" target="_blank"><img src="~/Content/Images/Reddit.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="http://stackoverflow.com/" target="_blank"><img src="~/Content/Images/StackOverflow.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="https://www.edx.org/course/subject/computer-science" target="_blank"><img src="~/Content/Images/EdX.jpg" alt="Owl Image"></a></div>
-         <div class="item"><a href="https://www.codecademy.com/" target="_blank"><img src="~/Content/Images/Codeacademy.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="https://www.khanacademy.org/computing/computer-programming" target="_blank"><img src="~/Content/Images/KhanAcademy.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="http://lifehacker.com/" target="_blank"><img src="~/Content/Images/LifeHacker.jpg" alt="Owl Image"></a></div>
-
-             * */
-            ViewBag.everything = everything;
+        ViewBag.everything = all;
 
             return View(dbQuotes);
         }
@@ -85,53 +156,23 @@ namespace TeamApolloFinal.Controllers
                     ViewBag.Quote = quote.Motivation.ToString();
                 }
             }
-            List<CarouselData> dotnet = new List<CarouselData>()
-            { new CarouselData() { linkUrl= "https://www.github.com", src=@"/Content/Images/github.jpg", alt="Owl Image"} ,
-            new CarouselData() {  linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"/Content/Images/MDSN.jpg", alt="MSDN"},
-            new CarouselData() { linkUrl= "http://www.w3schools.com/", src=@"/Content/Images/W3Schools.jpg", alt="Owl Image"},
-            new CarouselData() { linkUrl= "https://www.reddit.com/r/learnprogramming/", src=@"/Content/Images/Reddit.jpg", alt="Owl Image"}};
 
 
-            List<CarouselData> java = new List<CarouselData>()
-            {new CarouselData() { linkUrl= "https://www.reddit.com/r/learnprogramming/", src=@"/Content/Images/MDSN.jpg", alt="Owl Image"} ,
-            new CarouselData() {  linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"/Content/Images/MDSN.jpg", alt="MSDN"},
-            new CarouselData() { linkUrl= "http://www.w3schools.com/", src=@"/Content/Images/W3Schools.jpg", alt="Owl Image"},
-            new CarouselData() { linkUrl= "https://www.reddit.com/r/learnprogramming/", src=@"/Content/Images/Reddit.jpg", alt="Owl Image"}};
-
-            List<CarouselData> all = new List<CarouselData>()
-            {
-
-            };
-            List<CarouselData> everything ; ;
+            List<CarouselData> everything;
             switch (form["track"])
             {
                 case "java":
                     everything = java;
                     break;
                 case "net":
-                    everything =dotnet;
+                    everything = dotnet;
                     break;
                 default:
                     everything = all;
                     break;
             }
 
-           
-            /*
-             *   <div class="item"><a href="https://www.github.com" target="_blank"><img src="~/Content/Images/github.jpg" alt="Owl Image"></a></div>
-        
-        <div class="item"><a href="https://social.msdn.microsoft.com/search/en-US" target="_blank"><img src="~/Content/Images/MDSN.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="http://www.w3schools.com/" target="_blank"><img src="~/Content/Images/W3Schools.jpg" alt="Owl Image"></a></div>
-     
-       
-        <div class="item"><a href="https://www.reddit.com/r/learnprogramming/" target="_blank"><img src="~/Content/Images/Reddit.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="http://stackoverflow.com/" target="_blank"><img src="~/Content/Images/StackOverflow.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="https://www.edx.org/course/subject/computer-science" target="_blank"><img src="~/Content/Images/EdX.jpg" alt="Owl Image"></a></div>
-         <div class="item"><a href="https://www.codecademy.com/" target="_blank"><img src="~/Content/Images/Codeacademy.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="https://www.khanacademy.org/computing/computer-programming" target="_blank"><img src="~/Content/Images/KhanAcademy.jpg" alt="Owl Image"></a></div>
-        <div class="item"><a href="http://lifehacker.com/" target="_blank"><img src="~/Content/Images/LifeHacker.jpg" alt="Owl Image"></a></div>
 
-             * */
             ViewBag.everything = everything;
 
             return View(dbQuotes);

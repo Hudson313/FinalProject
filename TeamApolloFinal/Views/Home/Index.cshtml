@@ -89,32 +89,20 @@
 
     @using (Html.BeginForm())
     {
-        <label style="color:white"> all</label> <input type="radio" name="track" value="everything" />
-        <label style="color:white" > java</label>  <input type="radio" name="track" value="java" />
-        <label style="color:white"> dot net</label>  <input type="radio" name="track" value="net" />
+        <label style="color:white"> General</label> <input type="radio" name="track" value="everything" />
+        <label style="color:white" >Java</label>  <input type="radio" name="track" value="java" />
+        <label style="color:white"> .Net</label>  <input type="radio" name="track" value="net" />
         @*<label style="color:white"> javascript</label>  <input type="radio" name="track" value="javascript" />*@
          <input type="submit" value="select resources" />
     }
     <div id="owl-demo">
+
         @foreach (var carouseldata in (List<CarouselData>)ViewBag.everything)
         {
             <div class="item"><a href="@carouseldata.linkUrl" target="_blank"><img src="@carouseldata.src" alt="Owl Image"></a></div>
 
         }
-        @*    <div class="item"><a href="https://www.github.com" target="_blank"><img src="~/Content/Images/github.jpg" alt="Owl Image"></a></div>
-
-                   <div class="item"><a href="https://social.msdn.microsoft.com/search/en-US" target="_blank"><img src="~/Content/Images/MDSN.jpg" alt="Owl Image"></a></div>
-                   <div class="item"><a href="http://www.w3schools.com/" target="_blank"><img src="~/Content/Images/W3Schools.jpg" alt="Owl Image"></a></div>
-
-            <div class="item"><a href="https://www.reddit.com/r/learnprogramming/" target="_blank"><img src="~/Content/Images/Reddit.jpg" alt="Owl Image"></a></div>
-               <div class="item"><a href="http://stackoverflow.com/" target="_blank"><img src="~/Content/Images/StackOverflow.jpg" alt="Owl Image"></a></div>
-               <div class="item"><a href="https://www.edx.org/course/subject/computer-science" target="_blank"><img src="~/Content/Images/EdX.jpg" alt="Owl Image"></a></div>
-               <div class="item"><a href="https://www.codecademy.com/" target="_blank"><img src="~/Content/Images/Codeacademy.jpg" alt="Owl Image"></a></div>
-               <div class="item"><a href="https://www.khanacademy.org/computing/computer-programming" target="_blank"><img src="~/Content/Images/KhanAcademy.jpg" alt="Owl Image"></a></div>
-               <div class="item"><a href="http://lifehacker.com/" target="_blank"><img src="~/Content/Images/LifeHacker.jpg" alt="Owl Image"></a></div>*@
-
-
-
+      
     </div>
 
     <script>
