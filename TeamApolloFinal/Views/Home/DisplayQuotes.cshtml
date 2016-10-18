@@ -6,17 +6,25 @@
 <h2>DisplayQuotes</h2>
 
 <body>
-    <div>
-        @foreach(var quote in Model)
-        {
-            <p>@quote.QuoteID ) @quote.Motivation</p>
-
-            @Html.ActionLink("Home |", "Index")
-            @Html.ActionLink(" Add Quote |", "AddQuote")
-            @Html.ActionLink(" Delete Quote", "DeleteQuote", new { id = quote.QuoteID })
-            @Html.ActionLink(" ViewStudents","DisplayStudents")
-        }   
-    </div>
-
-
-</body>
+    @Html.ActionLink("Home |", "Index")
+    @Html.ActionLink(" Add Quote |", "AddQuote")
+    @Html.ActionLink(" ViewStudents", "DisplayStudents")
+    
+    <table style="width:100%">
+        <tr>
+            <th width="5%">ID</th>
+            <th width="75%">Quote</th>
+            <th width="20%">Link</th>
+       </tr>
+    </table>
+    <table style="width:100%">
+       @foreach (var quote in Model)
+       {
+           <tr>
+               <td width="5%">@quote.QuoteID</td>
+               <td width="75%">@quote.Motivation</td>
+               <td width="20%">@Html.ActionLink("Delete Quote", "DeleteQuote", new { id = quote.QuoteID })</td>
+           </tr>
+       }
+    </table>
+   </body>
