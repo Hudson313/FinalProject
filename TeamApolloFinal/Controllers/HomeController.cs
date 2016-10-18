@@ -136,6 +136,7 @@ namespace TeamApolloFinal.Controllers
 
             return View(dbQuotes);
         }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -173,6 +174,13 @@ namespace TeamApolloFinal.Controllers
             }
 
             return View();
+        }
+
+        public ActionResult DisplayQuotes()
+        {
+            List<Apollo> dbQuotes = dbContext.Apolloes.ToList();
+
+            return View(dbQuotes);
         }
 
         [HttpGet]

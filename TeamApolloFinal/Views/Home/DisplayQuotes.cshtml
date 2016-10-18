@@ -1,0 +1,18 @@
+﻿@model IEnumerable<TeamApolloFinal.Models.Apollo>
+@{
+    ViewBag.Title = "DisplayQuotes";
+}
+
+<h2>DisplayQuotes</h2>
+
+<body>
+    <div>
+        @foreach(var quote in Model)
+        {
+            <p>@quote.Motivation</p>
+        }
+    </div>
+
+    @Html.ActionLink("Home", "Index")
+    @Html.ActionLink("Add Quote", "AddQuote")
+</body>
