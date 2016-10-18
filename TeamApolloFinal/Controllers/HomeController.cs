@@ -14,16 +14,16 @@ namespace TeamApolloFinal.Controllers
         public MotivationaldbEntities dbContext = new MotivationaldbEntities();
 
         public List<CarouselData> dotnet = new List<CarouselData>()
-          { new CarouselData(){linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"/Content/Images/MSDN.jpg", alt="Owl Image"} ,
+          { new CarouselData(){linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"Content/Images/MSDN.jpg", alt="Owl Image"} ,
             new CarouselData() {  linkUrl= "https://dotnetcademy.net/", src=@"Content\Images\Dotnetcademy.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "https://www.reddit.com/r/dot_NET_Development/", src=@"Content\Images\RedditNet.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "https://trello.com", src=@"Content\Images\Trello.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "http://www.onlineprogrammingbooks.com/visualbasic-net/", src=@"Content\Images\.NetEbook.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "http://devproconnections.com/windows-development/learn-net-framework-c-no-prior-coding-experience", src=@"Content\Images\Devproconnect.jpg", alt="Owl Image"},
-            new CarouselData() { linkUrl= "https://blog.rackspace.com/how-i-learned-microsoft-net", src=@"Content\Images\.Net+Blog.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://blog.rackspace.com/how-i-learned-microsoft-net", src=@"Content\Images\.NetBlog.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "http://www.memrise.com/course/700708/learn-net-framework/", src=@"Content\Images\Memrise.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "http://www.teachertube.com/video/best-way-to-learn-net-framework-423724?utm_source=video-google&utm_medium=video-view&utm_term=video&utm_content=video-page&utm_campaign=video-view-page", src=@"Content\Images\TeacherTube.jpg", alt="Owl Image"},
-            new CarouselData() { linkUrl= "https://www.pluralsight.com/blog/software-development/learning-path-understanding-net-framework", src=@"Content\Images\.Net+Blog.jpg", alt="Owl Image"}
+            new CarouselData() { linkUrl= "https://www.pluralsight.com/blog/software-development/learning-path-understanding-net-framework", src=@"Content\Images\.NetBlog.jpg", alt="Owl Image"}
             };
         public List<CarouselData> java = new List<CarouselData>()
             {new CarouselData() { linkUrl= "https://www.reddit.com/r/java", src=@"/Content/Images/MDSN.jpg", alt="Owl Image"} ,
@@ -82,16 +82,16 @@ namespace TeamApolloFinal.Controllers
             }
 
              List<CarouselData> dotnet = new List<CarouselData>()
-          { new CarouselData(){linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"/Content/Images/MSDN.jpg", alt="Owl Image"} ,
+          { new CarouselData(){linkUrl= "https://social.msdn.microsoft.com/search/en-US", src=@"Content\Images\MDSN.jpg", alt="Owl Image"} ,
             new CarouselData() {  linkUrl= "https://dotnetcademy.net/", src=@"/Content/Images/Dotnetcademy.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "https://www.reddit.com/r/dot_NET_Development/", src=@"/Content/Images/RedditNet.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "https://trello.com", src=@"/Content/Images/Trello.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "http://www.onlineprogrammingbooks.com/visualbasic-net/", src=@"/Content/Images/.NetEbook.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "http://devproconnections.com/windows-development/learn-net-framework-c-no-prior-coding-experience", src=@"/Content/Images/Devproconnect.jpg", alt="Owl Image"},
-            new CarouselData() { linkUrl= "https://blog.rackspace.com/how-i-learned-microsoft-net", src=@"/Content/Images/.Net+Blog.jpg", alt="Owl Image"},
+            new CarouselData() { linkUrl= "https://blog.rackspace.com/how-i-learned-microsoft-net", src=@"/Content/Images/.NetBlog.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "http://www.memrise.com/course/700708/learn-net-framework/", src=@"/Content/Images/Memrise.jpg", alt="Owl Image"},
             new CarouselData() { linkUrl= "http://www.teachertube.com/video/best-way-to-learn-net-framework-423724?utm_source=video-google&utm_medium=video-view&utm_term=video&utm_content=video-page&utm_campaign=video-view-page", src=@"/Content/Images/TeacherTube.jpg", alt="Owl Image"},
-            new CarouselData() { linkUrl= "https://www.pluralsight.com/blog/software-development/learning-path-understanding-net-framework", src=@"/Content/Images/.Net+Blog.jpg", alt="Owl Image"}
+            new CarouselData() { linkUrl= "https://www.pluralsight.com/blog/software-development/learning-path-understanding-net-framework", src=@"/Content/Images/.NetBlog.jpg", alt="Owl Image"}
             };
 
 
@@ -129,7 +129,7 @@ namespace TeamApolloFinal.Controllers
               new CarouselData() {linkUrl = "http://www.codewars.com/", src =@"/Content/Images/Codewars.jpg", alt="Owl Image" },
               new CarouselData() {linkUrl = "https://www.codingame.com/start", src =@"/Content/Images/CodinGame.jpg", alt="Owl Image" },
               new CarouselData() {linkUrl = "http://gizmodo.com/", src =@"/Content/Images/Gizmodo.jpg", alt="Owl Image" },
-              new CarouselData() {linkUrl = "http://stackoverflow.com/users/story/join", src =@"/Content/Images/Developer+Story.jpg", alt="Owl Image" },
+              new CarouselData() {linkUrl = "http://stackoverflow.com/users/story/join", src =@"/Content/Images/DeveloperStory.jpg", alt="Owl Image" },
               new CarouselData() {linkUrl = "http://lifehacker.com/", src =@"/Content/Images/LifeHacker.jpg", alt="Owl Image" },
             };
 

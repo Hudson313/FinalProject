@@ -251,7 +251,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\.Net+Blog.jpg" />
+    <Content Include="Content\Images\.NetBlog.jpg" />
     <Content Include="Content\Images\.NetEbook.jpg" />
     <Content Include="Content\Images\Bootstrap.jpg" />
     <Content Include="Content\Images\Codeacademy.jpg" />
@@ -260,7 +260,7 @@
     <Content Include="Content\Images\Codewars.jpg" />
     <Content Include="Content\Images\CodinGame.jpg" />
     <Content Include="Content\Images\Cordova.jpg" />
-    <Content Include="Content\Images\Developer+Story.jpg" />
+    <Content Include="Content\Images\DeveloperStory.jpg" />
     <Content Include="Content\Images\Devproconnect.jpg" />
     <Content Include="Content\Images\Dotnetcademy.jpg" />
     <Content Include="Content\Images\EdX.jpg" />
@@ -274,8 +274,8 @@
     <Content Include="Content\Images\Learneroo.jpg" />
     <Content Include="Content\Images\LearnJava.jpg" />
     <Content Include="Content\Images\LifeHacker.jpg" />
-    <Content Include="Content\Images\MDSN.jpg" />
     <Content Include="Content\Images\Memrise.jpg" />
+    <Content Include="Content\Images\MSDN.jpg" />
     <Content Include="Content\Images\Oracle.jpg" />
     <Content Include="Content\Images\Reddit.jpg" />
     <Content Include="Content\Images\RedditJava.jpg" />
