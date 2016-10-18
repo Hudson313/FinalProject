@@ -9,10 +9,13 @@
     <div>
         @foreach(var quote in Model)
         {
-            <p>@quote.Motivation</p>
+            <p>@quote.QuoteID ) @quote.Motivation</p>
+
+            @Html.ActionLink("Home |", "Index")
+            @Html.ActionLink(" Add Quote |", "AddQuote")
+            @Html.ActionLink(" Delete Quote", "DeleteQuote", new { id = quote.QuoteID })
         }
     </div>
 
-    @Html.ActionLink("Home", "Index")
-    @Html.ActionLink("Add Quote", "AddQuote")
+
 </body>

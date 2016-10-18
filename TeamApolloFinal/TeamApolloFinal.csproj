@@ -349,6 +349,7 @@
     <Content Include="Views\Home\AddQuote.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\DisplayQuotes.cshtml" />
+    <Content Include="Views\Home\DeleteQuote.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

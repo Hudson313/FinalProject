@@ -164,7 +164,7 @@ namespace TeamApolloFinal.Controllers
             {
                 if ((name.UserName == admin.UserName) && (name.Password == admin.Password))
                 {
-                    return RedirectToAction("AddQuote");
+                    return RedirectToAction("DisplayQuotes");
                 }
                 else
                 {
@@ -181,6 +181,38 @@ namespace TeamApolloFinal.Controllers
             List<Apollo> dbQuotes = dbContext.Apolloes.ToList();
 
             return View(dbQuotes);
+        }
+
+        public ActionResult DeleteQuote(int id)
+        {
+            Apollo deleteQuote = dbContext.Apolloes.Find(id);
+
+            if(deleteQuote == null)
+            {
+                ViewBag.EditStatus = "Quote not found";
+
+                return View("DeleteQuote");
+            }
+
+            return View(deleteQuote);
+        }
+
+        [HttpPost, ActionName("DeleteQuote")]
+        public ActionResult DeleteConfirm(int id)
+        {
+            try
+            {
+                Apollo deleteQuote = dbContext.Apolloes.Find(id);
+                dbContext.Apolloes.Remove(deleteQuote);
+                dbContext.SaveChanges();
+
+                return RedirectToAction("DisplayQuotes");
+            }
+            catch
+            {
+                ViewBag.DeleteStatus = "Quote not deleted";
+                return View();
+            }
         }
 
         [HttpGet]
