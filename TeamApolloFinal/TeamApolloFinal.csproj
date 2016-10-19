@@ -280,6 +280,7 @@
     <Content Include="Content\Images\Reddit.jpg" />
     <Content Include="Content\Images\RedditJava.jpg" />
     <Content Include="Content\Images\RedditNet.jpg" />
+    <Content Include="Content\Images\registerbg.jpg" />
     <Content Include="Content\Images\Simplilearn.jpg" />
     <Content Include="Content\Images\Slack.jpg" />
     <Content Include="Content\Images\SoloLearn.jpg" />
