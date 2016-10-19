@@ -8,7 +8,7 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Index</title>
     @Styles.Render("~/Content/css")
     <style>
@@ -102,7 +102,8 @@
 
 
     <div id="quoteDiv" style="font-size:35px; color:white; text-align:center">@ViewBag.Quote</div>
-    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="display()">Fuel Up! Click Here For Another Quote</button>
+    <center><button style="width:340px;" type="button" class="btn btn-primary btn-lg btn-block" onclick="display()">Fuel Up! Click Here For Another Quote</button>
+    </center>
     <br />
     <br />
     <div>
@@ -120,43 +121,55 @@
         }
     </center>
     <div id="owl-demo">
-
         @foreach (var carouseldata in (List<CarouselData>)ViewBag.everything)
         {
             <div class="item"><a href="@carouseldata.linkUrl" target="_blank"><img src="@carouseldata.src" alt="Owl Image"></a></div>
-
         }
-
     </div>
 
     <script>
         $(document).ready(function () {
-
             $("#owl-demo").owlCarousel({
-
                 autoPlay: 3000, //Set AutoPlay to 3 seconds
-
                 items: 4,
                 itemsDesktop: [1199, 3],
                 itemsDesktopSmall: [979, 3]
-
             });
-
         });
     </script>
     <br />
-    <br />
-
+    <h2 style="font-family: 'Orbitron', sans-serif; font-size:35px; text-align:center; color:white;"><b>AllSystemsGo TwitterFeed</b></h2>
     @*Twitter widget*@
-    <h2 style="color:white;">Tweet us your programming questions at asg_launchpad</h2>
-    <a class="twitter-grid" data-limit="3" href="https://twitter.com/ASG_Launchpad/timelines/788378105932951554">New Collection</a>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
+    @*<h2 style="color:white;"></h2>*@
+    
+    <center>
+        <table style="width:85%">
+            <tr>
+                <td style="width:60%">
+                    <div @*style="width:50%; height:50%"*@>
+                        <a class="twitter-grid" data-limit="3" href="https://twitter.com/ASG_Launchpad/timelines/788378105932951554">New Collection</a>
+                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </td>
+                <td style="width:40%">
+                    <div>
+                        <a class="twitter-timeline" data-theme="dark" data-link-color="purple" data-height="475px" href="https://twitter.com/ASG_Launchpad/timelines/788378105932951554">All Systems Go ! - Curated tweets by ASG_Launchpad</a>
+                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </center>   
+    <br />
+    <br />
 
     @*Youtube API*@
     @*1. The <iframe> (and video player) will replace this <div> tag.*@
-    <h2 style="color:white;">Feed your mind and body with these helpful videos</h2>
+    <center>
+    <div>
+        <h2 style="font-family: 'Orbitron', sans-serif; font-size:35px; text-align:center; color:white;"><b>Health & Wellness</b></h2>
+        <h3 style="font-family: 'Orbitron', sans-serif; font-size:35px; text-align:center; color:white;">To successfully complete your bootcamp journey check out videos for the Mind Body and Spirit!</h3>
+    </div>
     <div id="player"></div>
     <script>
         // 2. This code loads the IFrame Player API code asynchronously.
@@ -201,8 +214,10 @@
             player.stopVideo();
         }
     </script>
-
-
+</center>
+<footer>
+            <p>&copy; @DateTime.Now.Year -</p>
+        </footer>
 
 
 
