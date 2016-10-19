@@ -54,6 +54,21 @@
             document.getElementById("quoteDiv").innerHTML = quotesArry[Math.floor((Math.random() * (quotesArry.length + 2)))];
         }
     </script>
+
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Changa:300|Orbitron:500|Satisfy|Ubuntu+Mono|VT323|Voltaire">
+    <style>
+        body {
+            font-family: 'Changa', sans-serif;
+            font-family: 'Orbitron', sans-serif;
+            font-family: 'Satisfy', cursive;
+            font-family: 'Ubuntu Mono', monospace;
+            font-family: 'VT323', monospace;
+            font-family: 'Voltaire', sans-serif;
+            font-size: 64px;
+        }
+    </style>
+
 </head>
 
 0
@@ -69,31 +84,40 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("AdminLogin", "LogIn")</li>
-                    <li>@Html.ActionLink("Register", "Register")</li>
+                    @*<li style="font-size:medium">@Html.ActionLink("Home", "Index", "Home")</li>*@
+                    <li style="font-size:medium">@Html.ActionLink("Admin Login", "LogIn")</li>
+                    <li style="font-size:medium">@Html.ActionLink("Register Student", "Register")</li>
                 </ul>
                 @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
+ <br />
+    <h1 style="font-family: 'Orbitron', sans-serif; font-size:x-large; text-align:center; color:white;">AllSystemsGo</h1>
+    <h2 style="font-family:'Orbitron', sans-serif; font-size:medium; text-align:center; color:white;">A Launchpad for Your New Career in Tech!</h2>
+<br />
+
+
     @*@*Quotes*@
     
-    <button onclick="display()">Fuel Up! Click Here For Another Quote</button>
-    <div id="quoteDiv" style="font-family:'Gentium Book Basic'; font-weight:bold; font-size:20px; color:white; ">@ViewBag.Quote</div>
-
-
-
     
-
+    <div id="quoteDiv" style="font-weight:bold; font-size:48px; color:white; text-align:center">@ViewBag.Quote</div>
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="display()">Fuel Up! Click Here For Another Quote</button>
+    <br />
+    <br />
+    <br />  
+<div>
+  <h2 style="font-family: 'Orbitron', sans-serif; font-size:x-large; text-align:center; color:white;"><b> Coding Resources</b></h2>
+  <h3 style="font-family: 'Orbitron', sans-serif; font-size:medium; text-align:center; color:white;"> Coding Resources. Check out these reources to stay informed and organized. </h3>   
+</div>
 
     @using (Html.BeginForm())
     {
-        <label style="color:white"> General</label> <input type="radio" name="track" value="everything" />
-        <label style="color:white" >Java</label>  <input type="radio" name="track" value="java" />
-        <label style="color:white"> .Net</label>  <input type="radio" name="track" value="net" />
+        @*<label style="font-weight:bold; font-size:30px; color:white;"> General</label> <input type="radio" name="track" value="everything" />*@
+        <label style="font-weight:bold; font-size:40px; color:white;" >Java</label>  <input type="radio" name="track" value="java" />
+        <label style="font-weight:bold; font-size:40px; color:white;"> .Net</label>  <input type="radio" name="track" value="net" />
         @*<label style="color:white"> javascript</label>  <input type="radio" name="track" value="javascript" />*@
-         <input type="submit" value="select resources" />
+         <input type="submit" value="Select Track" />
     }
     <div id="owl-demo">
 
