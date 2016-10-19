@@ -71,7 +71,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url('../../Content/Images/Space.jpg'); height: 100%; width: auto;">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -92,33 +92,33 @@
             </div>
         </div>
     </div>
- <br />
-    <h1 style="font-family: 'Orbitron', sans-serif; font-size:x-large; text-align:center; color:white;">AllSystemsGo</h1>
-    <h2 style="font-family:'Orbitron', sans-serif; font-size:medium; text-align:center; color:white;">A Launchpad for Your New Career in Tech!</h2>
-<br />
-
+    <br />
+    <h1 style="font-family:'Orbitron', sans-serif; font-size:48px; text-align:center; color:white;">AllSystemsGo</h1> 
+    <h2 style="font-family:'Orbitron', sans-serif; font-size:48px; text-align:center; color:white;">A Launchpad for Your New Career in Tech!</h2>
+    <br />
+    
 
     @*@*Quotes*@
-    
-    
-    <div id="quoteDiv" style="font-weight:bold; font-size:48px; color:white; text-align:center">@ViewBag.Quote</div>
+
+
+    <div id="quoteDiv" style="font-size:35px; color:white; text-align:center">@ViewBag.Quote</div>
     <button type="button" class="btn btn-primary btn-lg btn-block" onclick="display()">Fuel Up! Click Here For Another Quote</button>
     <br />
     <br />
-    <br />  
-<div>
-  <h2 style="font-family: 'Orbitron', sans-serif; font-size:x-large; text-align:center; color:white;"><b> Coding Resources</b></h2>
-  <h3 style="font-family: 'Orbitron', sans-serif; font-size:medium; text-align:center; color:white;"> Coding Resources. Check out these reources to stay informed and organized. </h3>   
-</div>
-
-    @using (Html.BeginForm())
-    {
-        @*<label style="font-weight:bold; font-size:30px; color:white;"> General</label> <input type="radio" name="track" value="everything" />*@
-        <label style="font-weight:bold; font-size:40px; color:white;" >Java</label>  <input type="radio" name="track" value="java" />
-        <label style="font-weight:bold; font-size:40px; color:white;"> .Net</label>  <input type="radio" name="track" value="net" />
-        @*<label style="color:white"> javascript</label>  <input type="radio" name="track" value="javascript" />*@
-         <input type="submit" value="Select Track" />
-    }
+    <div>
+        <h2 style="font-family: 'Orbitron', sans-serif; font-size:35px; text-align:center; color:white;"><b> Coding Resources</b></h2>
+        <h3 style="font-family: 'Orbitron', sans-serif; font-size:35px; text-align:center; color:white;">Check out these reources to stay informed and organized. </h3>
+    </div>
+    <center>
+        @using (Html.BeginForm())
+        {
+            @*<label style="font-weight:bold; font-size:30px; color:white;"> General</label> <input type="radio" name="track" value="everything" />*@
+            <label style="font-family: 'Orbitron', sans-serif ; font-weight:lighter; font-size:30px; color:white;">Java</label>  <input type="radio" name="track" value="java" />
+            <label style="font-family:  'Orbitron', sans-serif; font-weight:lighter; font-size:30px; color:white;"> .Net</label>  <input type="radio" name="track" value="net" />
+            @*<label style="color:white"> javascript</label>  <input type="radio" name="track" value="javascript" />*@
+            <input style="font-family:  'Orbitron', sans-serif; background-color:gold; color:navy; font-size:20px" type="submit" value="Select Track" />
+        }
+    </center>
     <div id="owl-demo">
 
         @foreach (var carouseldata in (List<CarouselData>)ViewBag.everything)
@@ -126,7 +126,7 @@
             <div class="item"><a href="@carouseldata.linkUrl" target="_blank"><img src="@carouseldata.src" alt="Owl Image"></a></div>
 
         }
-      
+
     </div>
 
     <script>
@@ -144,12 +144,15 @@
 
         });
     </script>
-   @*Twitter widget*@
-<h2 style="color:white;">Tweet us your programming questions at asg_launchpad</h2>
-<a class="twitter-grid" data-limit="3" href="https://twitter.com/ASG_Launchpad/timelines/788378105932951554">New Collection</a>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <br />
+    <br />
 
-    
+    @*Twitter widget*@
+    <h2 style="color:white;">Tweet us your programming questions at asg_launchpad</h2>
+    <a class="twitter-grid" data-limit="3" href="https://twitter.com/ASG_Launchpad/timelines/788378105932951554">New Collection</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 
     @*Youtube API*@
     @*1. The <iframe> (and video player) will replace this <div> tag.*@
