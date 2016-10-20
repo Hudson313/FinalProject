@@ -3,9 +3,22 @@
 @{
     ViewBag.Title = "Register";
 }
+<link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Changa:300|Orbitron:500|Satisfy|Ubuntu+Mono|VT323|Voltaire">
+<style>
+    body {
+        font-family: 'Changa', sans-serif;
+        font-family: 'Orbitron', sans-serif;
+        font-family: 'Satisfy', cursive;
+        font-family: 'Ubuntu Mono', monospace;
+        font-family: 'VT323', monospace;
+        font-family: 'Voltaire', sans-serif;
+        font-size: 64px;
+    }
+</style>
+<h1 style="font-family:'Orbitron', sans-serif; font-size:48px; text-align:center; color:white;">Register Student</h1> 
 
-<h2>Register</h2>
-<body style="font-family:'Gentium Book Basic'; font-weight:bold; font-size:20px; color:white;background-size:cover;background-repeat:no-repeat;background-image: url('../../Content/Images/space3.gif');">
+<body style="font-family:'Orbitron', sans-serif; font-size:20px;color:white;background-size:cover;background-repeat:no-repeat;background-image: url('../../Content/Images/experement.gif');">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -31,7 +44,7 @@
 
 
         <div class="form-horizontal">
-            <h4>Student</h4>
+            
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
