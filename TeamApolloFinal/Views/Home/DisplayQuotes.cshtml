@@ -23,7 +23,7 @@
 <h2>DisplayQuotes</h2>
 
 <body>
-
+    @Html.ActionLink("Add Quote", "AddQuote")
     
     <table style="width:100%">
         <tr>
@@ -33,13 +33,23 @@
        </tr>
     </table>
     <table style="width:100%">
-       @foreach (var quote in Model)
+        @for (int i = (Model.Count() - 10); i < Model.Count(); i++)
+        {
+            <tr>
+                <td width="5%">@Model.ElementAt(i).QuoteID</td>
+                <td width="75%">@Model.ElementAt(i).Motivation</td>
+                <td width="20%">@Html.ActionLink("Delete Quote", "DeleteQuote", new { id = Model.ElementAt(i).QuoteID })</td>
+            </tr>
+        }
+
+
+       @*@foreach (var quote in Model)
        {
            <tr>
                <td width="5%">@quote.QuoteID</td>
                <td width="75%">@quote.Motivation</td>
                <td width="20%">@Html.ActionLink("Delete Quote", "DeleteQuote", new { id = quote.QuoteID })</td>
            </tr>
-       }
+       }*@
     </table>
    </body>

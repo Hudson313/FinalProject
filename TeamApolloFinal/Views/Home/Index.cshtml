@@ -3,7 +3,7 @@
 @{
     Layout = null;
 }
-@*Hello*@
+
 <!DOCTYPE html>
 
 <html>
@@ -26,7 +26,6 @@
 
     <link href="~/Content/OwlCarousel/owl.carousel.css" rel="stylesheet" />
 
-
     <!-- Default Theme -->
 
     <link href="~/Content/OwlCarousel/owl.theme.css" rel="stylesheet" />
@@ -43,14 +42,11 @@
 
         @foreach(var quote in Model) {
             <text>
-        quotesArry.push(`@quote.Motivation`);
-        </text>
+                quotesArry.push(`@quote.Motivation`);
+            </text>
         }
 
-
-
         function display() {
-            //document.getElementById("quoteDiv").innerHTML = quotes[0];
             document.getElementById("quoteDiv").innerHTML = quotesArry[Math.floor((Math.random() * (quotesArry.length + 2)))];
         }
     </script>
@@ -68,7 +64,6 @@
             font-size: 64px;
         }
     </style>
-
 </head>
 
 <body style="background-image: url('../../Content/Images/Space.jpg'); height: 100%; width: auto;">
@@ -84,23 +79,21 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @*<li style="font-size:medium">@Html.ActionLink("Home", "Index", "Home")</li>*@
                     <li style="font-size:medium">@Html.ActionLink("Admin Login", "LogIn")</li>
                     <li style="font-size:medium">@Html.ActionLink("Register Student", "Register")</li>
                 </ul>
-                @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
+
     <br />
+
     <h1 style="font-family:'Orbitron', sans-serif; font-size:48px; text-align:center; color:white;">AllSystemsGo</h1> 
     <h2 style="font-family:'Orbitron', sans-serif; font-size:48px; text-align:center; color:white;">A Launchpad for Your New Career in Tech!</h2>
-    <br />
     
+    <br />
 
     @*@*Quotes*@
-
-
     <div id="quoteDiv" style="font-size:35px; color:white; text-align:center">@ViewBag.Quote</div>
     <center><button style="width:340px;" type="button" class="btn btn-primary btn-lg btn-block" onclick="display()">Fuel Up! Click Here For Another Quote</button>
     </center>
@@ -215,11 +208,8 @@
         }
     </script>
 </center>
-<footer>
-            <p>&copy; @DateTime.Now.Year -</p>
-        </footer>
-
-
-
+    <footer style="color:white; font-family:'Orbitron', sans-serif; font-size:18px;">
+        <p>&copy; @DateTime.Now.Year - All Systems Go</p>
+    </footer>
 </body>
 </html>
