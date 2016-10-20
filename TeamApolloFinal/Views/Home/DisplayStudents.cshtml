@@ -2,6 +2,23 @@
 @{
     ViewBag.Title = "DisplayStudents";
 }
+<head>
+
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Changa:300|Orbitron:500|Satisfy|Ubuntu+Mono|VT323|Voltaire">
+    <style>
+        body {
+            font-family: 'Changa', sans-serif;
+            font-family: 'Orbitron', sans-serif;
+            font-family: 'Satisfy', cursive;
+            font-family: 'Ubuntu Mono', monospace;
+            font-family: 'VT323', monospace;
+            font-family: 'Voltaire', sans-serif;
+            font-size: 64px;
+        }
+    </style>
+
+</head>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -20,29 +37,30 @@
         </div>
     </div>
 </div>
-<h2>DisplayStudents</h2>
+<h2 style="font-family:'Orbitron', sans-serif;">DisplayStudents</h2>
+<body style="font-family:'Chenga',sans-serif; font-weight:bold; font-size:20px; color:white;background-size:cover;background-repeat:no-repeat;background-image: url('../../Content/Images/quotepage.jpg');">
 
 
-<body>
-   
-    <table style="width:100%">
-        <tr>
-            <th width="25%">FirstName</th>
-            <th width="25%">LastName</th>
-            <th width="25%">Email</th>
-            <th width="25%">Track</th>
+    <body>
+
+        <table style="width:100%">
+            <tr>
+                <th width="25%">FirstName</th>
+                <th width="25%">LastName</th>
+                <th width="25%">Email</th>
+                <th width="25%">Track</th>
             </tr>
         </table>
-            
-    <table style="width:100%">
-        @foreach (var Student in Model)
-        {
-            <tr>
-                <td width="25%">@Student.FirstName</td>
-                <td width="25%">@Student.LastName</td>
-                <td width="25%">@Student.Email</td>
-                <td width="25%">@Student.Track</td>
-            </tr>
-        }
-    </table>
+
+        <table style="width:100%">
+            @foreach (var Student in Model)
+            {
+                <tr>
+                    <td width="25%">@Student.FirstName</td>
+                    <td width="25%">@Student.LastName</td>
+                    <td width="25%">@Student.Email</td>
+                    <td width="25%">@Student.Track</td>
+                </tr>
+            }
+        </table>
     </body>

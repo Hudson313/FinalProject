@@ -3,6 +3,21 @@
 @{
     ViewBag.Title = "LogIn";
 }
+<head>
+<link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Changa:300|Orbitron:500|Satisfy|Ubuntu+Mono|VT323|Voltaire">
+<style>
+    body {
+        font-family: 'Changa', sans-serif;
+        font-family: 'Orbitron', sans-serif;
+        font-family: 'Satisfy', cursive;
+        font-family: 'Ubuntu Mono', monospace;
+        font-family: 'VT323', monospace;
+        font-family: 'Voltaire', sans-serif;
+        font-size: 64px;
+    }
+</style>
+</head>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -21,15 +36,16 @@
         </div>
     </div>
 </div>
-<h2>LogIn</h2>
+<h2 style="font-family:'Orbitron', sans-serif;">LogIn</h2>
+<body style="font-family:'Changa', sans-serif; font-weight:bold; font-size:20px; color:white;background-size:cover;background-repeat:no-repeat;background-image: url('../../Content/Images/adminbg.jpg');">
+    @ViewBag.InvalidLogIn
 
-@ViewBag.InvalidLogIn
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>Username: @Html.TextBoxFor(x => x.UserName)</p>
+        <p>Password: @Html.PasswordFor(x => x.Password)</p>
 
-@using (Html.BeginForm())
-{
-    @Html.ValidationSummary()
-    <p>Username: @Html.TextBoxFor(x => x.UserName)</p>
-    <p>Password: @Html.PasswordFor(x =>x.Password)</p>
-
-    <input type="submit" value="Submit Info." />
-}
+        <input type="submit" value="Submit Info." />
+    }
+</body>
