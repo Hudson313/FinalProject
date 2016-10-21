@@ -285,7 +285,7 @@
     <Content Include="Content\Images\LearnJava.jpg" />
     <Content Include="Content\Images\LifeHacker.jpg" />
     <Content Include="Content\Images\Memrise.jpg" />
-    <Content Include="Content\Images\MSDN.jpg" />
+    <Content Include="Content\Images\msdn.jpg" />
     <Content Include="Content\Images\Oracle.jpg" />
     <Content Include="Content\Images\quotepage.jpg" />
     <Content Include="Content\Images\quotespage.jpg" />

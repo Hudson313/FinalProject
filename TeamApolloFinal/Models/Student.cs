@@ -11,13 +11,23 @@ namespace TeamApolloFinal.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+        
     public partial class Student
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Please enter your name")]
         public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your last name")]
         public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email")]
+        [RegularExpression(".+\\@.+\\..+", ErrorMessage = "Please enter a valid email address")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "Please enter a valid track")]
         public string Track { get; set; }
     }
 }

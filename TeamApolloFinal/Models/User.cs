@@ -11,11 +11,16 @@ namespace TeamApolloFinal.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class User
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Please enter your username")]
         public string UserName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your password")]
         public string Password { get; set; }
     }
 }

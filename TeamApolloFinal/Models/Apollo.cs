@@ -11,10 +11,13 @@ namespace TeamApolloFinal.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Apollo
     {
         public int QuoteID { get; set; }
+
+        [Required(ErrorMessage = "Please enter a new quote")]
         public string Motivation { get; set; }
     }
 }
